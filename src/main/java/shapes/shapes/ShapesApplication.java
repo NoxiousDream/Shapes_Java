@@ -13,7 +13,7 @@ import java.io.IOException;
 public class ShapesApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ShapesApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ShapesApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
         Group root = new Group();
         Canvas canvas = new Canvas(800, 600);
