@@ -12,10 +12,12 @@ public class Circle extends Shape {
 
     @Override
     public void Draw(GraphicsContext gc) {
+        gc.fillOval(X - (0.5 * Radius), Y - (0.5 * Radius), Radius, Radius);
+        gc.strokeOval(X - (0.5 * Radius), Y - (0.5 * Radius), Radius, Radius);
     }
 
     @Override
-    public boolean IsInside(int xMouse, int yMouse) {
+    public boolean IsInside(double xMouse, double yMouse) {
         return Math.pow(xMouse - X, 2) + Math.pow(yMouse - Y, 2) <= Math.pow(Radius, 2);
     }
 }

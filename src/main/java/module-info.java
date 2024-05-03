@@ -6,4 +6,6 @@ module shapes.shapes {
 
     opens shapes.shapes to javafx.fxml;
     exports shapes.shapes;
+    exports shapes.shapes.utils;
+    opens shapes.shapes.utils to javafx.fxml;
 }

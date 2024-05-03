@@ -18,13 +18,13 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public boolean IsInside(int xMouse, int yMouse) {
+    public boolean IsInside(double xMouse, double yMouse) {
 
         var xcos = Math.sqrt(3) / 2 * Radius;
         var a = new Point((int) (X + xcos), (int) (Y + Radius * 0.5));
-        var b = new Point((int)X, (int)Y - Radius);
+        var b = new Point((int)X, (int)(Y - Radius));
         var c = new Point((int) (X - xcos), (int) (Y + Radius * 0.5));
-        var p = new Point(xMouse, yMouse);
+        var p = new Point((int)xMouse, (int)yMouse);
 
         var abc = TriangleArea(a, b, c);
         var abp = TriangleArea(a, b, p);

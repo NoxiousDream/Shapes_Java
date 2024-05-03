@@ -1,16 +1,17 @@
 package shapes.shapes;
 
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
+import shapes.shapes.utils.Color;
+import shapes.shapes.utils.ShapeType;
 
 public abstract class Shape {
-    protected static int Radius;
-    protected double X;
-    protected double Y;
+    protected static double Radius = 40;
+    public static Color ShColor = new Color();
+    public double X, Y;
+    public double Xd, Yd;
     protected boolean Moving;
-    protected Color Colour;
 
-    public static Shape newShape(int x, int y, ShapeType type) {
+    public static Shape newShape(double x, double y, ShapeType type) {
         return switch (type) {
             case Circle -> new Circle(x, y);
             case Triangle -> new Triangle(x, y);
@@ -20,6 +21,6 @@ public abstract class Shape {
 
     public abstract void Draw(GraphicsContext gc);
 
-    public abstract boolean IsInside(int xMouse, int yMouse);
+    public abstract boolean IsInside(double xMouse, double yMouse);
 }
 

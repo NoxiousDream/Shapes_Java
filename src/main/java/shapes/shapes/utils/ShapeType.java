@@ -1,4 +1,4 @@
-package shapes.shapes;
+package shapes.shapes.utils;
 
 public enum ShapeType {
     Circle,

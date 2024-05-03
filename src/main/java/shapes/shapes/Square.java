@@ -16,7 +16,7 @@ public class Square extends Shape {
     }
 
     @Override
-    public boolean IsInside(int xMouse, int yMouse) {
+    public boolean IsInside(double xMouse, double yMouse) {
         return (Math.abs(X - xMouse) <= Radius / Math.sqrt(2)) && (Math.abs(Y - yMouse) <= Radius / Math.sqrt(2));
     }
 }
